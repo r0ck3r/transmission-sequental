@@ -1,0 +1,12 @@
+--- a/libtransmission/torrent.c
++++ b/libtransmission/torrent.c
+@@ -888,7 +888,7 @@
+ 
+   tor->finishedSeedingByIdle = false;
+ 
+-  tor->sequentialDownload = false;
++  tor->sequentialDownload = true;
+ 
+   tr_peerMgrAddTorrent (session->peerMgr, tor);
+ 
+ 
