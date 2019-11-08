@@ -57,7 +57,7 @@ endef
 
 define Package/transmission-cli/Default
   $(call Package/transmission/template)
-  DEPENDS:=+libcurl +libpthread +libevent2 +librt +zlib
+  DEPENDS:=+libcurl +libpthread +libevent2 +librt +zlib +libminiupnpc
 endef
 
 define Package/transmission-cli-openssl
