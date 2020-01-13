@@ -57,7 +57,7 @@ endef
 
 define Package/transmission-cli/Default
   $(call Package/transmission/template)
-  DEPENDS:=+libcurl +libpthread +libevent2 +librt +zlib +libminiupnpc
+  DEPENDS:=+libcurl +libpthread +libevent2 +librt +zlib
 endef
 
 define Package/transmission-cli-openssl
@@ -132,7 +132,7 @@ Package/transmission-daemon-mbedtls/conffiles = $(Package/transmission-daemon-op
 
 
 CONFIGURE_VARS += \
-	LIBEVENT_LIBS="$(STAGING_DIR)/usr/lib/libevent-2.0.so.5"
+	LIBEVENT_LIBS="$(STAGING_DIR)/usr/lib/libevent-2.1.so.7"
 
 CONFIGURE_ARGS += \
 	--enable-daemon \
